@@ -1,0 +1,44 @@
+#N canvas 656 26 589 660 10;
+#X obj 121 213 dac~;
+#X obj 41 93 vline~;
+#X obj 117 132 *~;
+#X obj 41 18 bng 15 250 50 0 empty click r_click 17 7 0 10 -262144
+-1 -1;
+#X obj 220 96 noise~, f 11;
+#X msg 41 51 1 10 \, 0 50 10;
+#X obj 229 597 dac~;
+#X obj 272 391 mtof;
+#X floatatom 268 342 5 0 0 0 r_midinote midinote -, f 5;
+#X obj 225 554 *~ 1;
+#X floatatom 273 432 5 0 0 0 - - -, f 5;
+#X obj 268 466 osc~, f 11;
+#X obj 149 477 vline~;
+#X obj 225 516 *~;
+#X obj 81 339 bng 15 250 50 0 empty tone r_tone 17 7 0 10 -262144 -1
+-1;
+#X msg 76 393 1 10 \, 0 50 10;
+#X obj 117 170 *~ 0.5;
+#X obj 157 81 vline~;
+#X obj 157 6 bng 15 250 50 0 empty click_off r_click_off 17 7 0 10
+-262144 -1 -1;
+#X msg 157 39 1 50 \, 0 10 50;
+#X connect 1 0 2 0;
+#X connect 2 0 16 0;
+#X connect 3 0 5 0;
+#X connect 4 0 2 1;
+#X connect 5 0 1 0;
+#X connect 7 0 10 0;
+#X connect 8 0 7 0;
+#X connect 9 0 6 0;
+#X connect 9 0 6 1;
+#X connect 10 0 11 0;
+#X connect 11 0 13 1;
+#X connect 12 0 13 0;
+#X connect 13 0 9 0;
+#X connect 14 0 15 0;
+#X connect 15 0 12 0;
+#X connect 16 0 0 0;
+#X connect 16 0 0 1;
+#X connect 17 0 2 0;
+#X connect 18 0 19 0;
+#X connect 19 0 17 0;
